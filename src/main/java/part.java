@@ -86,7 +86,7 @@ public class part {
             street = m.group("street");
             address0.add(street == null ? "" : street.trim());
             num = m.group("num");
-            address0.add(street == null ? "" : num.trim());
+            address0.add(num == null ? "" : num.trim());
             village = m.group("village");
             address0.add(village == null ? "" : village.trim());
             // System.out.println(address0);
