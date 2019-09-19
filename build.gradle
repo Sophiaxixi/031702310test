@@ -30,7 +30,7 @@ shadowJar{
     archivesBaseName = "addressbook"
     classifier(null)
     manifest{
-        attributes 'Main-Class':'Lost'
+        attributes 'Main-Class':'address'
     }
 }
 assemble.dependsOn(shadowJar)
