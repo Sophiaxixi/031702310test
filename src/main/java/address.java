@@ -108,16 +108,17 @@ public class address {
             int flag=0;
            try {
                if (readString[j].charAt(0) == '1') flag = 1;
+               if(readString[j].charAt(0)=='1')   flag=1;
+               else if(readString[j].charAt(0)=='2')   flag=2;
+               int ch=readString[j].indexOf(',');
+               String name=readString[j].substring(2,ch) ;
+               readString[j]=readString[j].substring(2,readString[j].length());  //去掉前面的数字
+               readString[j] = readString[j].replaceAll(name+",","");  //找到名字并且去掉；
+               //    System.out.println(readString[j]);
            }catch(NullPointerException e){
                System.out.println("yuejie");
            }
-           if(readString[j].charAt(0)=='1')   flag=1;
-            else if(readString[j].charAt(0)=='2')   flag=2;
-            int ch=readString[j].indexOf(',');
-            String name=readString[j].substring(2,ch) ;
-            readString[j]=readString[j].substring(2,readString[j].length());  //去掉前面的数字
-            readString[j] = readString[j].replaceAll(name+",","");  //找到名字并且去掉；
-            //    System.out.println(readString[j]);
+
 
 
             int k;//标记手机号后一位
