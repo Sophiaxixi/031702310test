@@ -106,7 +106,12 @@ public class address {
         //在输入的多条语句中操作
         for(int j=0;j<readString.length;j++){
             int flag=0;
-            if(readString[j].charAt(0)=='1')   flag=1;
+           try {
+               if (readString[j].charAt(0) == '1') flag = 1;
+           }catch(NullPointerException e){
+               System.out.println("yuejie");
+           }
+           if(readString[j].charAt(0)=='1')   flag=1;
             else if(readString[j].charAt(0)=='2')   flag=2;
             int ch=readString[j].indexOf(',');
             String name=readString[j].substring(2,ch) ;
